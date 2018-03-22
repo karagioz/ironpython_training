@@ -33,7 +33,7 @@ def random_string(prefix, maxlen):
     return prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])
 
 
-testdata = [Group(name="")] + [
+testdata = [
     Group(name=random_string("name", 10))
     for i in range(n)
 ]
@@ -51,6 +51,6 @@ for i in range(len(testdata)):
 
 workbook.SaveAs(file)
 
-time.sleep(10)
+time.sleep(5)
 
 excel.Quit()
